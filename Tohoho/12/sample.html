@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+  </head>
+  <body>
+    <script>
+      xx = "[23:22:22]".replace(/(\d+):(\d+):(\d+)/, function (
+        match,
+        p1,
+        p2,
+        p3,
+        offset,
+        str
+      ) {
+        console.log(match);
+        console.log(p1);
+        console.log(p2);
+        console.log(p3);
+        console.log(offset);
+        console.log(str);
+        return p1 + "字" + p2 + "分" + p3 + "びょう";
+      });
+      console.log(xx);
+    </script>
+  </body>
+</html>
