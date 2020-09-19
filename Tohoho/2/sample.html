@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+    <script>
+      window.onLoad = function () {
+        setInterval(function () {
+          var dd = new Date();
+          document.getElementById("time").innerHTML = dd.toLocaleString();
+        }, 1000);
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="time"></div>
+  </body>
+</html>
