@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+  </head>
+  <body>
+    <script>
+      var str = "2019年12月31日";
+      var result = str.match(/(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/u);
+      console.log(result.groups.year);
+      console.log(result.groups.month);
+      console.log(result.groups.day);
+    </script>
+  </body>
+</html>
