@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+  </head>
+  <body>
+    <script>
+      for(var [key, value] of map){
+        console.log(key, ":", value);
+      }
+      for(var key of keys()){
+        console.log(key, ":", map.get(key));
+      }
+      for(var [key, value] of map.entries()){
+        console.log(key, ":", value);
+      }
+      map.forEach(function(value){
+        console.log(value);
+      });
+      map.forEach(function(value, key){
+        console.log(key, ":", value);
+      })
+      map.forEach(function(value, key, map){
+        console.log(key, ":", map.get(key));
+      });
+      map.forEach(function(value, key){
+        this.set(key, value * 2);
+        console.log(key, ":", this.get(key));
+      }, map)
+
+      class Person{
+        constructor(name){ this.name = name;}
+        getName(){ return (this.name);}
+      }
+
+      const favorites = new Map();
+      const religions = new WeakMap();
+
+      function doSomething(){
+        let p1 = new Person("Yamada", 26);
+        console.log(p1.getName);
+
+        favorites.set(p1, "baseball");
+        console.log(favorites.get(p1));
+
+        religions.set(p1, "buddism");
+        console.log(religions.get(p1));
+      }
+
+      doSomething();
+
+      for(var key of favorites.keys()){
+        console.log(key.name + ":" + favorites.get(key));
+      }
+      for(var key of religions.keys()){
+        console.log(key.name + ":" + religions.get(key));
+      }
+    </script>
+  </body>
+</html>
