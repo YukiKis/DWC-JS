@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+  </head>
+  <body>
+    <form name="form1" action="#">
+      <input type="text" name="text1" value="123" />
+      <input type="button" value="OK" onclick="func()" />
+    </form>
+
+    <script>
+      function func() {
+        alert(document.form1.text1.value + 4);
+        alert(parseInt(document.form1.text1.value + 4));
+      }
+    </script>
+    <script>
+      var obj = {
+        name: "Yamada",
+        age: 24
+      };
+      console.log(obj.name);
+      delete obj.name;
+      console.log(obj.name);
+      p1 = {
+        name: "Yamada",
+        age: 24
+      };
+      if("name" in p1){
+        console.log("YES");
+      }
+      function Person(){}
+      var p1 = new Person();
+      if(p1.instanceof(Person)){
+        console.log("YES");
+      }else{
+        console.log("NO");
+      }
+    </script>
+  </body>
+</html>

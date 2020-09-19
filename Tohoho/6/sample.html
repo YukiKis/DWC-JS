@@ -5,12 +5,16 @@
     <title>TITLE</title>
   </head>
   <body>
+    <form name="form1" action="#">
+      <input type="text" name="text1" value="123" />
+      <input type="button" value="OK" onclick="func()" />
+    </form>
+
     <script>
-      console.log("A");
-      console.log("B");
-      debugger;
-      console.log("C");
-      console.log("D");
+      function func() {
+        alert(document.form1.text1.value + 4);
+        alert(Number(document.form1.text1.value + 4));
+      }
     </script>
   </body>
 </html>
