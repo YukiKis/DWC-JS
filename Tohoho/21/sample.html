@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        hello() {
+          console.log("Hello!");
+        }
+      }
+
+      class Cat extends Animal {
+        hello() {
+          super.hello();
+        }
+      }
+
+      var o1 = new Cat();
+      o1.hello();
+
+      var o2 = class {
+        constructor() {
+          this.type = "cat";
+        }
+      };
+      console.log(o2.type);
+    </script>
+  </body>
+</html>
