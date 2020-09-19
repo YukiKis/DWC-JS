@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>TITLE</title>
+  </head>
+  <body>
+    <script>
+      class MyClass {
+        constructor(name) {
+          this.name = name;
+        }
+        *[Symbol.iterator]() {
+          for (var i = 0; i < this.name.length; i++) {
+            yield this.name.charAt(i);
+          }
+        }
+      }
+      var obj = new MyClass("Yamada");
+      for (o of obj) {
+        console.log(o);
+      }
+    </script>
+  </body>
+</html>
