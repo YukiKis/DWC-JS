@@ -1,8 +1,18 @@
-let data = {red: "RED", yellow: "YELLOW"};
-let proxy = new Proxy{
-  data, {
-    get(target, prop){
-      return prop in target ? taget[prop] : "?";
-    }
-  }
-}
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("btn").addEventListener("click", function(){
+    var worker = new Worker("scripts/worker.js");
+    worker.postMessage({
+      "target": document.getElementById("target").value,
+      "x": document.getElementById("x").value
+    });
+    document.getElementById("result").textContent = "CALCULATING";
+
+    worker.addEventListener("message", function(e){
+      document.getElementById("result").textContent = e.data;
+    }, false);
+
+    worker.addEventListener("error", function(){
+      document.getElementById("result").textContent = e.message;
+    }, false);
+  }, false);
+}, false);

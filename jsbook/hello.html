@@ -5,8 +5,13 @@
     <title>TITLE</title>
   </head>
   <body>
-    <a href="JavaScript:window.alert('Hello, world!');">DIALOG</a>
-    <script type="text/javascript" src="scripts/hello_ex.js"></script>
-    <noscript>NO JAVASCRIPT</noscript>
+    <form>
+      <input id="target" type="number" value="1000000"> 以下：
+      <input id="x" type="number" value="7">の倍数の個数=
+      <span id="result">____</span>
+      <input id="btn" type="button" value="CALC">
+    </form>
+    <script src="scripts/worker.js"></script>
+    <script src="scripts/hello_ex.js"></script>
   </body>
 </html>
